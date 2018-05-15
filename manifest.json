@@ -23,7 +23,7 @@
   },
   "content_scripts": [
    {
-     "matches": ["https://online.carrefour.com.tw/*"],
+     "matches": ["https://online.carrefour.com.tw/*", "https://sbd-ec.wellcome.com.tw/*"],
      "run_at": "document_end",
      "css": ["myStyles.css"],
      "js": ["contentScript.js"]
