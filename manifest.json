@@ -1,0 +1,32 @@
+{
+  "manifest_version": 2,
+  "name": "Compare Food Prices Among Taiwan Stores",
+  "description": "Users can know the same product's information on the other sites.",
+  "version": "1.0",
+
+  "icons": { "16": "icon16.png",
+             "48": "icon48.png",
+            "128": "icon128.png" },
+
+  "browser_action": {
+    "default_title": "frout-pricebot"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+    /* "http://localhost:8080/" , use server' cors enable instead*/
+  ],
+  "background": {
+    "scripts": [
+    ]
+  },
+  "content_scripts": [
+   {
+     "matches": ["https://online.carrefour.com.tw/*"],
+     "run_at": "document_end",
+     "css": ["myStyles.css"],
+     "js": ["contentScript.js"]
+   }
+  ]
+}
