@@ -49,7 +49,6 @@ if (currentPage.indexOf(carrefourStoreURL)>-1) {
     promotionPrice = null;
 }
 
-
 if (productName && promotionPrice) {
 
     console.log("query product name:", productName);
@@ -62,7 +61,7 @@ if (productName && promotionPrice) {
             store: "carrefour",
             productName,
             shownPrice: promotionPrice,
-            url: currentPage // notify internal staff when honestbee price is not cheaper
+            sourceURL: currentPage // notify internal staff when honestbee price is not cheaper
         }
     };
     fetch(apiServer, {
